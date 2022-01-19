@@ -1,0 +1,84 @@
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap'); * { margin: 0; padding: 0; box-sizing:
+      border-box; } body { font-family: 'Inter', sans-serif; font-weight: 400; line-height: 30px; width: 100%; } header
+      { background-color: #191820; height: 167px; max-width: 600px; margin: 0 auto; text-align: center; padding-top:
+      25px; } .logo { margin: 0 auto; width: 293px; } .main { padding: 50px 50px 25px 50px; max-width: 600px; margin: 0
+      auto; background-color: #efefef; } footer { background-color: #191820; max-width: 600px; margin: 0 auto;
+      text-align: center; padding: 50px 25px 40px; margin-bottom: 50px; } strong { font-weight: 700; font-size: 26px;
+      color: #FFFFFF; line-height: 38px; } .welcome { font-size: 34px; font-weight: 900; margin-bottom: 70px; }
+      .paragraph { margin-bottom: 28px; font-size: 20px; } .course { font-weight: 700; } .button { border-radius: 8px;
+      background: #007AFE; width: 222px; text-align: center; color: #FCFCFC; height: 49px; text-decoration: none;
+      display: block; font-size: 14px; font-weight: 600; line-height: 49px; } .social-midias { display: inline-block;
+      margin-right: 26px; } .social-midias-box { margin-bottom: 22px; } .praks-link { color: #FCC419; margin-bottom:
+      28px; }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <img
+        class='logo'
+        style='display: block;'
+        src='https://praks-edtech.s3.amazonaws.com/static/logo.png'
+        width='293.84'
+        height='107'
+        alt='PRAKS!'
+      />
+    </header>
+    <main>
+      <div class='main'>
+        <p class='welcome'>Boas notícias 👀</p>
+        <p class='paragraph'>
+          Dia
+          {{courseDate}}
+          às
+          {{courseHour}}
+          o curso de
+          {{courseName}}
+          estará disponível na Praks.
+        </p>
+        <p class='paragraph'>
+          <a class='button' style='color: #FCFCFC;' href='{{courseURL}}'>VER CONTEÚDO DO CURSO</a>
+        </p>
+
+        <p class='paragraph'>Bons estudos!</p>
+      </div>
+    </main>
+    <footer>
+      <strong>Abraços,</strong>
+      <br />
+      <strong>Equipe Praks</strong>
+      <br />
+      <br />
+      <div class='social-midias-box'>
+        <a class='social-midias' href='https://www.linkedin.com/company/praks/'>
+          <img src='https://praks-edtech.s3.amazonaws.com/static/linkedin.png' alt='linkedin' />
+        </a>
+        <a class='social-midias' href='https://www.facebook.com/PRAKS-103768351894644'>
+          <img src='https://praks-edtech.s3.amazonaws.com/static/facebook.png' alt='facebook' />
+        </a>
+        <a href='https://www.instagram.com/praks_tech/'>
+          <img src='https://praks-edtech.s3.amazonaws.com/static/instagram.png' alt='instagram' />
+        </a>
+      </div>
+      <p class='praks-link'>
+        <a style='text-decoration: none; color: #FCC419; font-size: 22px' href='https://praks.digital'>
+          praks.digital
+        </a>
+      </p>
+      <p style='color: #ababab; font-size: 14px; padding: 0 75px; margin-bottom: 16px; line-height: 21px'>
+        Você está recebendo este e-mail porque demonstrou interesse nos cursos da Praks
+      </p>
+      <p>
+        <a href='{{appURL}}/api/v1/opt-ins/unsubscribe?email={{email}}' style='color: #ffffff;font-size: 12px'>
+          Cancelar a assinatura
+        </a>
+      </p>
+    </footer>
+  </body>
+</html>
